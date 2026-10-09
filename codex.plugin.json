@@ -1,0 +1,19 @@
+{
+  "name": "autodeploy",
+  "version": "1.0.0",
+  "description": "AI project standardization and GitHub deployment for Codex",
+  "author": "lingtk711-arch",
+  "license": "MIT",
+  "main": "./scripts/autodeploy.js",
+  "scripts": {
+    "review": "node ./scripts/autodeploy.js review",
+    "scaffold": "node ./scripts/autodeploy.js scaffold",
+    "compress": "node ./scripts/autodeploy.js compress",
+    "memory": "node ./scripts/autodeploy.js memory",
+    "push": "node ./scripts/autodeploy.js push"
+  },
+  "codex": {
+    "compatibleAgents": ["codex", "claude-code"],
+    "skills": ["autodeploy"]
+  }
+}

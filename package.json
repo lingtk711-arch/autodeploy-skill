@@ -1,0 +1,21 @@
+{
+  "name": "autodeploy",
+  "version": "1.0.0",
+  "description": "AI project standardization and GitHub deployment skill",
+  "author": "lingtk711-arch",
+  "license": "MIT",
+  "main": "./scripts/autodeploy.js",
+  "bin": {
+    "autodeploy": "./scripts/autodeploy.js"
+  },
+  "keywords": [
+    "ai",
+    "github",
+    "automation",
+    "coding-agent",
+    "skill"
+  ],
+  "scripts": {
+    "autodeploy": "node ./scripts/autodeploy.js"
+  }
+}
