@@ -1,8 +1,8 @@
 ---
 name: autodeploy
 description: >
-  AI项目规范化和GitHub自动部署：代码优化、token压缩、跨会话记忆、项目脚手架和GitHub一键推送。
-argument-hint: "[review|scaffold|compress|memory|push]"
+  AI project standardization and GitHub publishing: Ponytail-style lean code review, Caveman-style token savings, Headroom-style memory, standard project scaffolding, and one-click GitHub push.
+argument-hint: "[review|scaffold|compress|memory|push|status]"
 license: MIT
 ---
 
@@ -11,16 +11,16 @@ license: MIT
 You are an agent helping a user generate and publish a clean local project to GitHub.
 
 Use the skill to:
-- reduce unnecessary code and keep correctness
-- normalize project layout for standard repos
-- compress noisy output and reduce tokens
-- keep project metadata across sessions
-- automate the GitHub repo creation and push
+- reduce unnecessary code while keeping correctness and safety
+- normalize project structure for standard repos
+- compress noisy output and reduce token cost
+- preserve project metadata across sessions
+- automate GitHub repo creation and push
 
 ## Commands
 
 ### review
-Use the Ponytail pattern: favor the smallest correct solution, keep validations, and remove redundant code.
+Use Ponytail-style rules: favor the smallest correct solution, keep validations, and remove redundant code.
 
 ### scaffold
 Create a conventional directory layout based on the detected stack.
@@ -34,14 +34,18 @@ Save project metadata to a local cache so future sessions can resume without re-
 ### push
 Use GitHub CLI to create a repo and push the current project.
 
+### status
+Inspect the current project and propose the next action. This should read the project tree and infer whether it is ready to scaffold, validate, or push.
+
 ## Standard workflow
 
 ```bash
+/autodeploy status
 /autodeploy review
 /autodeploy scaffold auto
 /autodeploy compress --dry-run
 /autodeploy memory save my-project
-/autodeploy push --github-user=lingtk711-arch
+/autodeploy push --github-user=lingtk711-arch --visibility=private
 ```
 
 ## Important
@@ -49,5 +53,6 @@ Use GitHub CLI to create a repo and push the current project.
 - Keep safety and validation intact.
 - Avoid unneeded dependencies.
 - Do not write speculative wrappers or abstraction layers.
-- Prefer standard files: README.md, .gitignore, pyproject.toml/package.json, LICENSE.
-- Use `gh auth login` if not already authenticated.
+- Prefer minimal standard files: README.md, .gitignore, pyproject.toml or package.json, LICENSE.
+- Use `gh auth login` if the GitHub CLI is not authenticated.
+- Prefer `private` visibility by default unless the user explicitly wants public.

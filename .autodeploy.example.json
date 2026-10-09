@@ -1,0 +1,16 @@
+{
+  "github": {
+    "user": "lingtk711-arch",
+    "visibility": "private",
+    "topics": ["ai-generated", "automation", "project-template"],
+    "description": "AI-generated project"
+  },
+  "scaffold": {
+    "auto_detect": true,
+    "license": "MIT"
+  },
+  "compress": {
+    "enabled": true,
+    "exclude": ["node_modules", ".git", ".venv", "__pycache__"]
+  }
+}
