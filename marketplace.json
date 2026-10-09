@@ -1,0 +1,35 @@
+{
+  "name": "AutoDeploy Skill",
+  "version": "1.0.0",
+  "description": "AI project standardization and GitHub automation: Ponytail-style code review, Caveman token savings, Headroom context memory, project scaffolding, and one-click GitHub push",
+  "author": "lingtk711-arch",
+  "license": "MIT",
+  "repository": "https://github.com/lingtk711-arch/autodeploy-skill",
+  "homepage": "https://github.com/lingtk711-arch/autodeploy-skill",
+  "skills": [
+    {
+      "name": "autodeploy",
+      "path": "./skills/autodeploy/SKILL.md",
+      "description": "AI project standardization and GitHub deployment",
+      "commands": [
+        "review",
+        "scaffold",
+        "compress",
+        "memory",
+        "push",
+        "status"
+      ]
+    }
+  ],
+  "keywords": [
+    "ai",
+    "github",
+    "automation",
+    "coding-agent",
+    "deployment",
+    "scaffolding",
+    "ponytail",
+    "caveman",
+    "headroom"
+  ]
+}

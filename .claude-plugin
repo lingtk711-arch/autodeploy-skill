@@ -1,0 +1,17 @@
+{
+  "name": "autodeploy",
+  "version": "1.0.0",
+  "displayName": "AutoDeploy",
+  "description": "AI project standardization and GitHub deployment in one skill",
+  "author": "lingtk711-arch",
+  "license": "MIT",
+  "repository": "https://github.com/lingtk711-arch/autodeploy-skill",
+  "skills": [
+    "autodeploy"
+  ],
+  "compatibleAgents": [
+    "claude-code",
+    "codex",
+    "cursor"
+  ]
+}
